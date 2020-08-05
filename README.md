@@ -10,7 +10,7 @@ The authors for all maps had either released their maps on mcresourcepile, or ha
 
 To use this repository in your own PGM server, add the repository to the config:
 
-```
+```yml
 map:
   repositories:
     - uri: "https://github.com/OvercastCommunity/tournament-1-mappool"	
