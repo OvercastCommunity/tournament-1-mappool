@@ -124,4 +124,5 @@
 <modes>
     <mode name="Scorebox cobwebs are now one layer!" after="4m" material="air"/>
 </modes>
+<autorespawn/>
 </map>
