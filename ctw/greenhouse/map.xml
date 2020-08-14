@@ -112,6 +112,9 @@
     <item>apple</item>
     <item>sapling</item>
 </itemremove>
+<killreward>
+	<item>golden apple</item>
+</killreward>
 <gamerules>
     <doDaylightCycle>true</doDaylightCycle>
 </gamerules>

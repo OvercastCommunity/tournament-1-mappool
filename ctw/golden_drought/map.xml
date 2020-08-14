@@ -172,6 +172,9 @@
     <item>glass bottle</item>
     <item>string</item>
 </itemremove>
+<killreward>
+	<item>golden apple</item>
+</killreward>
 <toolrepair>
     <tool>stone sword</tool>
     <tool>bow</tool>
