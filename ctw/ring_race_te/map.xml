@@ -126,6 +126,9 @@
     <tool>iron axe</tool>
     <tool>arrow</tool>
 </toolrepair>
+<killreward>
+	<item>golden apple</item>
+</killreward>
 <itemremove>
     <item>log</item>
     <item>wood</item>

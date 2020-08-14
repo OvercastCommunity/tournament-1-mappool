@@ -109,6 +109,9 @@
         </destroyable>
     </destroyables>
 </destroyables>
+<killreward>
+	<item>golden apple</item>
+</killreward>
 <itemremove>
     <item>obsidian</item>
     <item>gold block</item>
