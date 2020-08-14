@@ -2,7 +2,7 @@
 <map proto="1.4.0">
 <time overtime="1m" max-overtime="15m">12m</time>
 <name>Nartica</name>
-<version>1.4.7</version>
+<version>1.4.8</version>
 <objective>Capture both of the enemy's flags.</objective>
 <authors>
     <author uuid="07fa10c6-f564-4630-861e-fe134ae27527"/> <!-- Yoyo_ -->
@@ -99,6 +99,7 @@
 <score>
     <kills>0</kills>
     <deaths>0</deaths>
+	<mercy>5</mercy>
 </score>
 <killreward>
     <item amount="8">arrow</item>
