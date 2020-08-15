@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <map proto="1.4.0">
-<name>Scrap Mettle</name>
-<time>12m</time>
-<version>2.0.4</version>
+<name>Scrap Mettle TE</name>
+<time overtime="1m" max-overtime="15m">12m</time>
+<version>2.0.5</version>
 <objective>Score points by killing the other team and entering your team's goal on the other side.</objective>
 <authors>
     <author uuid="4a0780d3-d9c4-41c4-a816-e077a36f27c9"/> <!-- KasiCrafter -->
