@@ -99,7 +99,7 @@
 <score>
     <kills>0</kills>
     <deaths>0</deaths>
-	<mercy>5</mercy>
+	<!--mercy>5</mercy-->
 </score>
 <killreward>
     <item amount="8">arrow</item>
