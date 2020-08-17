@@ -18,12 +18,12 @@
     <lives>1</lives>
 </blitz>
 <spawns>
-    <spawn team="blue" yaw="-90">
+    <spawn team="blue" yaw="90">
         <regions>
             <point>6,10,0</point>
         </regions>
     </spawn>
-    <spawn team="red" yaw="90">
+    <spawn team="red" yaw="-90">
         <regions>
             <point>-6,10,0</point>
         </regions>
@@ -34,7 +34,7 @@
         </regions>
     </default>
 </spawns>
-<cores leak="5" proximity-metric="none" show-progress="true">
+<cores leak="5" proximity-metric="none">
     <core team="blue">
         <region>
             <cuboid min="9,14,-1" max="11,17,1"/>
