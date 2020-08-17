@@ -2,7 +2,7 @@
 <map proto="1.3.5">
 <time overtime="1m" max-overtime="15m">45m</time>
 <name>Ring Race TE</name>
-<version>1.7.0</version>
+<version>1.8.0</version>
 <objective>Capture the wool from the enemies wool rooms and return them to your victory monument</objective>
 <authors>
     <author uuid="e8d1ad63-bd9e-4d0e-9a6c-27f2b047d924"/> <!-- Mikeg542 -->
@@ -16,10 +16,10 @@
 </teams>
 <spawns>
     <spawns>
-        <spawn kit="spawn" team="orange" yaw="270">
+        <spawn kit="spawn" team="orange" yaw="90">
             <cylinder name="orangespawn" base="159,17,-3" radius="3" height="0"/>
         </spawn>
-        <spawn kit="spawn" team="purple" yaw="90">
+        <spawn kit="spawn" team="purple" yaw="270">
             <cylinder name="purplespawn" base="19,17,-3" radius="3" height="0"/>
         </spawn>
     </spawns>
@@ -41,7 +41,7 @@
     </kit>
 </kits>
 <filters>
-    <filter name="no-void" parents="allow-all">
+    <filter name="no-void">
         <deny>
             <void/>
         </deny>
@@ -76,17 +76,37 @@
     </filter>
 </filters>
 <regions>
+    <union name="woolrooms">
+        <rectangle name="yellow-room" min="209,38" max="230,59"/>
+        <rectangle name="red-room" min="209,-43" max="230,-64"/>
+        <rectangle name="lime-room" min="-30,-43" max="-51,-64"/>
+        <rectangle name="blue-room" min="-30,59" max="-51,38"/>
+    </union>
+
+    <apply block="no-void" message="You may not modify the void area!">
+        <negative>
+            <rectangle min="101,-21" max="77,-30"/>
+            <rectangle min="101,16" max="77,25"/>
+        </negative>
+    </apply>
+    <apply block="deny-all" message="You may not break this!">
+        <intersect>
+            <region name="woolrooms"/>
+            <below y="8"/>
+        </intersect>
+        <cuboid min="207,1,44" max="209,5,53"/>
+        <cuboid min="207,1,-58" max="209,5,-49"/>
+
+        <cuboid min="-30,1,44" max="-28,5,53"/>
+        <cuboid min="-30,1,-58" max="-28,5,-49"/>
+    </apply>
     <apply enter="only-purple" block="only-purple" use="only-purple-usage" message="You may not enter or modify your own wool rooms!">
-        <!--   Yellow Room   -->
-        <rectangle min="209,38" max="230,59"/>
-        <!--   Red Room   -->
-        <rectangle min="209,-43" max="230,-64"/>
+        <region name="yellow-room"/>
+        <region name="red-room"/>
     </apply>
     <apply enter="only-orange" block="only-orange" use="only-orange-usage" message="You may not enter or modify your own wool rooms!">
-        <!--   Lime Room   -->
-        <rectangle min="-30,-43" max="-51,-64"/>
-        <!--   Blue Room   -->
-        <rectangle min="-30,59" max="-51,38"/>
+        <region name="lime-room"/>
+        <region name="blue-room"/>
     </apply>
     <apply block="deny-all" message="You may not modify the spawn!">
         <cuboid name="purple-storage-room" min="27,15,-11" max="12,28,5"/>
@@ -97,12 +117,6 @@
     </apply>
     <apply enter="only-orange" message="You may not enter orange's spawn room!">
         <region name="orange-storage-room"/>
-    </apply>
-    <apply block="no-void" message="You may not modify the void area!">
-        <negative>
-            <rectangle min="101,-21" max="77,-30"/>
-            <rectangle min="101,16" max="77,25"/>
-        </negative>
     </apply>
 </regions>
 <wools wool-proximity-metric="none">
@@ -136,6 +150,6 @@
     <item>iron sword</item>
     <item>glass</item>
 </itemremove>
-<maxbuildheight>25</maxbuildheight>
+<maxbuildheight>30</maxbuildheight>
 <respawn delay="7s" auto="true"/>
 </map>
