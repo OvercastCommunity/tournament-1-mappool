@@ -151,7 +151,7 @@
         </negative>
     </apply>
 </regions>
-<wools team="blue">
+<wools team="blue" wool-proximity-metric="none">
     <wool color="magenta" location="-123.5,9,24.5">
         <block>65,10,0</block>
     </wool>
@@ -159,7 +159,7 @@
         <block>65,10,-1</block>
     </wool>
 </wools>    
-<wools team="red">
+<wools team="red" wool-proximity-metric="none">
     <wool color="green" location="123.5,9,-24.5">
         <block>-66,10,-1</block>
     </wool>
