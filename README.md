@@ -15,3 +15,7 @@ map:
   repositories:
     - uri: "https://github.com/OvercastCommunity/tournament-1-mappool"	
 ```
+
+## Archive
+
+Since the tournament is over, this repository will be kept archived, and maps here will stay unmodified
